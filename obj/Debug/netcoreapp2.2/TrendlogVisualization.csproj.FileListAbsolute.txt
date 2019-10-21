@@ -32,3 +32,4 @@ C:\Users\Johannes\Documents\GitHub\TrendlogVisualization\obj\Debug\netcoreapp2.2
 C:\Users\Johannes\Documents\GitHub\TrendlogVisualization\obj\Debug\netcoreapp2.2\TrendlogVisualization.csproj.CopyComplete
 C:\Users\Johannes\Documents\GitHub\TrendlogVisualization\bin\Debug\netcoreapp2.2\launch.json
 C:\Users\Johannes\Documents\GitHub\TrendlogVisualization\bin\Debug\netcoreapp2.2\tasks.json
+C:\Users\Johannes\Documents\GitHub\TrendlogVisualization\obj\Debug\netcoreapp2.2\Razor\Views\Home\Sidebar.cshtml.g.cs
