@@ -27,6 +27,7 @@ namespace TrendlogVisualization.Data
                         TotalOrders = 25621,
                         ClientProfits = 123,
                         PeopleInterested = 2,
+                        ProductPrice = 12365,
                     }
                     );
 
@@ -36,6 +37,7 @@ namespace TrendlogVisualization.Data
                         TotalOrders = 50,
                         ClientProfits = 235,
                         PeopleInterested = 35,
+                        ProductPrice = 954636,
                     }
                     );
 

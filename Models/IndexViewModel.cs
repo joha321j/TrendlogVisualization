@@ -12,5 +12,6 @@ namespace TrendlogVisualization.Models
 
         public int TotalClientProfits => SuperDatas.Sum(data => data.ClientProfits);
         public int PeopleInterested => SuperDatas.Sum(data => data.PeopleInterested);
+        public int ProductsSold => SuperDatas.Sum(data => data.OrderProfit);
     }
 }

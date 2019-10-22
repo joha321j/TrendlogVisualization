@@ -389,7 +389,7 @@
                             <div class="widget-subheading">Last year expenses</div>
                         </div>
                         <div class="widget-content-right">
-                            <div class="widget-numbers text-success"></div>
+                            <div class="widget-numbers text-success"> @Html.DisplayFor(model => model.TotalOrders)</div>
                         </div>
                     </div>
                 </div>
@@ -404,7 +404,7 @@
                             <div class="widget-subheading">Revenue streams</div>
                         </div>
                         <div class="widget-content-right">
-                            <div class="widget-numbers text-warning">$3M</div>
+                            <div class="widget-numbers text-warning">$@Html.DisplayFor(model => model.ProductsSold)</div>
                         </div>
                     </div>
                 </div>
@@ -419,7 +419,7 @@
                             <div class="widget-subheading">People Interested</div>
                         </div>
                         <div class="widget-content-right">
-                            <div class="widget-numbers text-danger">45,9%</div>
+                            <div class="widget-numbers text-danger">@Html.DisplayFor(model => model.PeopleInterested)%</div>
                         </div>
                     </div>
                 </div>

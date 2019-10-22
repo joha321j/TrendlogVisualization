@@ -11,5 +11,7 @@ namespace TrendlogVisualization.Models
         public int TotalOrders { get; set; }
         public int ClientProfits { get; set; }
         public int PeopleInterested { get; set; }
+        public int ProductPrice { get; set; }
+        public int OrderProfit => ProductPrice * TotalOrders;
     }
 }
