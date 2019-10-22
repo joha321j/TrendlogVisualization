@@ -14,5 +14,6 @@ namespace TrendlogVisualization.Data
         }
 
         public DbSet<Models.SuperDataClass> SuperData { get; set; }
+        public DbSet<Models.Author> Authors { get; set; }
     }
 }

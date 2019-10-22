@@ -8,6 +8,7 @@ namespace TrendlogVisualization.Models
     public class IndexViewModel
     {
         public List<SuperDataClass> SuperDatas { get; set; }
+        public PaginatedList<Author> Authors { get; set; }
         public int TotalOrders => SuperDatas.Sum(data => data.TotalOrders);
 
         public int TotalClientProfits => SuperDatas.Sum(data => data.ClientProfits);

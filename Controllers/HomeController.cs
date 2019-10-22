@@ -13,22 +13,40 @@ namespace TrendlogVisualization.Controllers
     public class HomeController : Controller
     {
         private readonly TrendlogContext _context;
+        private IndexViewModel _indexViewModel;
 
         public HomeController(TrendlogContext context)
         {
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        [HttpPost]
+        public int GiveDataToCharts()
+        {
+            Random nr = new Random();
+            int randNr = nr.Next(1, 100);
+            return randNr;
+        }
+
+
+        public async Task<IActionResult> Index(int? pageNumber)
         {
             var superData = from s in _context.SuperData
                 select s;
 
-            var indexViewModel = new IndexViewModel
+            var authors = _context.Authors.Select(a => a);
+
+
+            PaginatedList<Author> paginatedAuthors =
+                await PaginatedList<Author>.CreateAsync(authors, pageNumber ?? 1);
+
+            _indexViewModel = new IndexViewModel
             {
-                SuperDatas = await superData.ToListAsync()
+                SuperDatas = await superData.ToListAsync(),
+                Authors = paginatedAuthors
             };
-            return View(indexViewModel);
+            
+            return View(_indexViewModel);
         }
 
         public IActionResult Privacy()
@@ -166,6 +184,5 @@ namespace TrendlogVisualization.Controllers
         {
             return View();
         }
-
     }
 }
