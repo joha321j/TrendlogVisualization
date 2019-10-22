@@ -1,4 +1,5 @@
-﻿
+﻿@model IndexViewModel
+
 <div class="app-main__inner">
     <div class="app-page-title">
         <div class="page-title-wrapper">
@@ -75,7 +76,7 @@
                         <div class="widget-subheading">Last year expenses</div>
                     </div>
                     <div class="widget-content-right">
-                        <div class="widget-numbers text-white"><span>1896</span></div>
+                        <div class="widget-numbers text-white"><span>@Html.DisplayFor(model => model.TotalOrders)</span></div>
                     </div>
                 </div>
             </div>
@@ -88,7 +89,7 @@
                         <div class="widget-subheading">Total Clients Profit</div>
                     </div>
                     <div class="widget-content-right">
-                        <div class="widget-numbers text-white"><span>$ 568</span></div>
+                        <div class="widget-numbers text-white"><span>$ @Html.DisplayFor( model => model.TotalClientProfits)</span></div>
                     </div>
                 </div>
             </div>
@@ -101,7 +102,7 @@
                         <div class="widget-subheading">People Interested</div>
                     </div>
                     <div class="widget-content-right">
-                        <div class="widget-numbers text-white"><span>46%</span></div>
+                        <div class="widget-numbers text-white"><span> @Html.DisplayFor( model=> model.PeopleInterested)%</span></div>
                     </div>
                 </div>
             </div>
@@ -338,7 +339,7 @@
                                         <div class="widget-content-outer">
                                             <div class="widget-content-wrapper">
                                                 <div class="widget-content-left">
-                                                    <div class="widget-numbers fsize-3 text-muted">71%</div>
+                                                    <div class="widget-numbers fsize-3 text-muted"></div>
                                                 </div>
                                                 <div class="widget-content-right">
                                                     <div class="text-muted opacity-6">Server Allocation</div>
@@ -388,7 +389,7 @@
                             <div class="widget-subheading">Last year expenses</div>
                         </div>
                         <div class="widget-content-right">
-                            <div class="widget-numbers text-success">1896</div>
+                            <div class="widget-numbers text-success"></div>
                         </div>
                     </div>
                 </div>

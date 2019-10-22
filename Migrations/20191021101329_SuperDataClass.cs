@@ -8,7 +8,7 @@ namespace TrendlogVisualization.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "SuperData",
+                name: "SuperDatas",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -24,7 +24,7 @@ namespace TrendlogVisualization.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "SuperData");
+                name: "SuperDatas");
         }
     }
 }

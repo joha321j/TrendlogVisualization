@@ -9,8 +9,8 @@ using TrendlogVisualization.Data;
 namespace TrendlogVisualization.Migrations
 {
     [DbContext(typeof(TrendlogContext))]
-    [Migration("20191021101329_SuperDataClass")]
-    partial class SuperDataClass
+    [Migration("20191022074238_PeopleInterested")]
+    partial class PeopleInterested
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,11 +26,15 @@ namespace TrendlogVisualization.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("ClientProfits");
+
+                    b.Property<int>("PeopleInterested");
+
                     b.Property<int>("TotalOrders");
 
                     b.HasKey("Id");
 
-                    b.ToTable("SuperDatas");
+                    b.ToTable("SuperData");
                 });
 #pragma warning restore 612, 618
         }

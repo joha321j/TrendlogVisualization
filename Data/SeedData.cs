@@ -25,8 +25,21 @@ namespace TrendlogVisualization.Data
                     new SuperDataClass
                     {
                         TotalOrders = 25621,
+                        ClientProfits = 123,
+                        PeopleInterested = 2,
                     }
                     );
+
+                context.SuperData.AddRange(
+                    new SuperDataClass
+                    {
+                        TotalOrders = 50,
+                        ClientProfits = 235,
+                        PeopleInterested = 35,
+                    }
+                    );
+
+                context.SaveChanges();
             }
         }
     }

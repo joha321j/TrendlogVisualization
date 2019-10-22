@@ -7,7 +7,10 @@ namespace TrendlogVisualization.Models
 {
     public class IndexViewModel
     {
-        public SuperDataClass SuperData { get; set; }
-        public int TotalOrders => SuperData.TotalOrders;
+        public List<SuperDataClass> SuperDatas { get; set; }
+        public int TotalOrders => SuperDatas.Sum(data => data.TotalOrders);
+
+        public int TotalClientProfits => SuperDatas.Sum(data => data.ClientProfits);
+        public int PeopleInterested => SuperDatas.Sum(data => data.PeopleInterested);
     }
 }

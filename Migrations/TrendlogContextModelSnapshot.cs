@@ -24,6 +24,10 @@ namespace TrendlogVisualization.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("ClientProfits");
+
+                    b.Property<int>("PeopleInterested");
+
                     b.Property<int>("TotalOrders");
 
                     b.HasKey("Id");

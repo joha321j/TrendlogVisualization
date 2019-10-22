@@ -9,5 +9,7 @@ namespace TrendlogVisualization.Models
     {
         public int Id { get; set; }
         public int TotalOrders { get; set; }
+        public int ClientProfits { get; set; }
+        public int PeopleInterested { get; set; }
     }
 }

@@ -4,15 +4,31 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TrendlogVisualization.Data;
 using TrendlogVisualization.Models;
 
 namespace TrendlogVisualization.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly TrendlogContext _context;
+
+        public HomeController(TrendlogContext context)
         {
-            return View();
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var superData = from s in _context.SuperData
+                select s;
+
+            var indexViewModel = new IndexViewModel
+            {
+                SuperDatas = await superData.ToListAsync()
+            };
+            return View(indexViewModel);
         }
 
         public IActionResult Privacy()
